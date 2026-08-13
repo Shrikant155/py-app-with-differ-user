@@ -28,7 +28,11 @@ pipeline {
       sh 'docker system prune -f'
       }
       success {
-      echo 'all stages are runs ok'
+          {
+            mail to: "shrikantdevops999@gmail.com",
+                 subject: "success: job ${env.JOB_NAME}",   
+                 body: " build succesfull chek output ${env.BUILD_URL}"
+            }
       } 
       failure {
         echo 'somthng is failed'
