@@ -9,7 +9,7 @@ pipeline {
          }
 
        }
-       stage("build-image") {
+       stage("build-docker-image") {
          steps {
           sh 'docker build  --no-cache -t py-app-user2:${BUILD_NUMBER} .'
 
