@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir --user --upgrade  setuptools>=78.1.1 msgpack>=1.2
 ENV PATH=/root/.local/bin:$PATH
 COPY . .
 
-RUN useradd -m ram && chown -R ram /app /root/.local
+RUN useradd -m ram && chmod 755 /root && chown -R ram /app /root/.local
 USER ram 
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
