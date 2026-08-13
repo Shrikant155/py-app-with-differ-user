@@ -31,7 +31,7 @@ pipeline {
       echo 'all stages are runs ok'
       } 
       failure {
-        echo 'somthng is failed"
+        echo 'somthng is failed'
        }
    }
 
