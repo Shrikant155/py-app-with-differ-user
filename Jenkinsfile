@@ -1,7 +1,7 @@
 pipeline {
    agent any 
     stages {
-       stage("get-code") {
+       stage("fetch-repo") {
          steps {
           git branch: 'main',
           credentialsId: 'github-cred-id',
